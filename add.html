@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <style>
+        /* 🌟 General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffcc99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 📌 Form Container */
+        .form-container {
+            background: #f4a460;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* 📌 Header */
+        .form-header {
+            background: #d3d3d3;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        /* 📌 Input Fields */
+        .form-group {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background: #e6e6e6;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            background: #fff;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 50px;
+        }
+
+        /* 📌 Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        button {
+            flex: 1;
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #d3d3d3;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #a9a9a9;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* ✨ Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 📌 Form Container -->
+    <div class="form-container">
+        <div class="form-header">Add Book</div>
+
+        <div class="form-group">
+            <label>BOOK NAME:</label>
+            <input type="text" placeholder="Enter book name">
+        </div>
+
+        <div class="form-group">
+            <label>ISBN:</label>
+            <input type="text" placeholder="Enter ISBN">
+        </div>
+
+        <div class="form-group">
+            <label>AUTHOR:</label>
+            <input type="text" placeholder="Enter author">
+        </div>
+
+        <div class="form-group">
+            <label>DATE PUBLISHED:</label>
+            <input type="date">
+        </div>
+
+        <div class="form-group">
+            <label>DESCRIPTION:</label>
+            <textarea placeholder="Enter description"></textarea>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="submitForm()">ADD BOOK</button>
+            <a href="dashboard.html"><button class="back-btn">Back</button></a>
+    </div>
+
+    <script>
+        function submitForm() {
+            alert("Book Added Successfully!");
+        }
+
+        function goBack() {
+            alert("Going Back...");
+        }
+    </script>
+
+</body>
+</html>

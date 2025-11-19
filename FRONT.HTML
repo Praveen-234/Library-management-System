@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h1>Welcome to Library Management System</h1>
+        </div>
+        <div class="buttons">
+            <button id="login-btn">User Login</button>
+            <button id="exit-btn">Exit</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function() {
+            window.location.href = 'login.html'; 
+        });
+
+        document.getElementById('exit-btn').addEventListener('click', function() {
+            alert('Exiting application...');
+        });
+    </script>
+
+    <style>
+        /* 🎨 Background with Blur Effect */
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 📦 Main Container */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* 🏆 Welcome Text */
+        .welcome h1 {
+            font-size: 28px;
+            color: #660000;
+            margin-bottom: 20px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        /* 🔘 Button Styling */
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 14px 24px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 🚀 Login Button */
+        #login-btn {
+            background-color: #013794;
+            color: white;
+        }
+
+        #login-btn:hover {
+            background-color: #0250c5;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(2, 80, 197, 0.4);
+        }
+
+        /* 🚨 Exit Button */
+        #exit-btn {
+            background-color: #7e0404;
+            color: white;
+        }
+
+        #exit-btn:hover {
+            background-color: #c41c1c;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(196, 28, 28, 0.4);
+        }
+
+        /* 🔥 Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</body>
+</html>

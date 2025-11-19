@@ -1,0 +1,159 @@
+
+/* 🌈 Full-Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🏠 Login Container (Bigger & Centered) */
+.login-container {
+    width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    animation: zoomIn 0.6s ease-in-out forwards;
+}
+
+/* 🔹 Top Bar */
+.top-bar {
+    background: #ff758c;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 🔘 Buttons */
+.login-box {
+    margin-top: 10px;
+}
+
+.admin-btn, .user-btn {
+    padding: 12px;
+    margin: 5px;
+    width: 45%;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.admin-btn {
+    background: #ff758c;
+    color: white;
+}
+
+.user-btn {
+    background: #42a5f5;
+    color: white;
+}
+
+.admin-btn:hover, .user-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* 📌 Login Content */
+.login-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #f2f2f2;
+    border-radius: 0 0 12px 12px;
+    flex-direction: column;
+    box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔑 Key Icon */
+.key-icon img {
+    width: 80px;
+    height: auto;
+    animation: bounce 1.5s infinite;
+}
+
+/* 🖊 Input Fields */
+.login-form {
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.login-form label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Input Focus Effect */
+.login-form input:focus {
+    border-color: #ff758c;
+    box-shadow: 0px 0px 8px rgba(255, 117, 140, 0.7);
+}
+
+/* 🚀 Submit Button */
+.submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    background: #42a5f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: #1e88e5;
+    transform: scale(1.05);
+}
+
+/* 🎭 Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}

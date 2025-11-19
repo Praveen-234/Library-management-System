@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="issue-book-container">
+        <div class="issue-book-box">
+            <h2>Issue Book</h2>
+
+            <label>Member ID:</label>
+            <input type="text" placeholder="Enter Member ID" required>
+
+            <label>Book ID:</label>
+            <input type="text" placeholder="Enter Book ID" required>
+
+            <label>Issue Date:</label>
+            <input type="date" required>
+
+            <label>Return Date:</label>
+            <input type="date" required>
+
+            <div class="button-container">
+                <button class="issue-btn">Issue Book</button>
+                <a href="dashboard.html"><button class="back-btn">Back</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Button animation on click
+        document.querySelector(".issue-btn").addEventListener("click", function() {
+            this.classList.add("clicked");
+            setTimeout(() => this.classList.remove("clicked"), 300);
+            alert("Book Issued Successfully!");
+        });
+    </script>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: url('library.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Issue Book Box */
+        .issue-book-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .issue-book-box {
+            background: rgba(255, 165, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            background: lightgray;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #f5f5f5;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            background: #e0e0e0;
+            transition: background 0.3s ease;
+        }
+
+        /* Buttons */
+        .button-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .issue-btn, .back-btn {
+            background: white;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .issue-btn:hover {
+            background: green;
+            color: white;
+        }
+
+        .back-btn:hover {
+            background: red;
+            color: white;
+        }
+
+        .issue-btn.clicked {
+            transform: scale(0.95);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+</body>
+</html>
